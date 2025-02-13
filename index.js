@@ -28,7 +28,7 @@ connectDB();
 const app = express();
 //CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:5173', // Remove trailing slash
+  origin: 'https://grand-kangaroo-2c0776.netlify.app', // Remove trailing slash
   credentials: true, // Allow cookies and authentication headers
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
