@@ -30,7 +30,8 @@ export const signin = async (req, res, next) => {
     const { password: pass, ...rest } = validUser._doc;
     console.log("validUse",token)
     res
-      .cookie("access_token", token, { httpOnly: true })
+      .cookie("access_token", token, { httpOnly: true,secure: true, // Required for HTTPS
+        sameSite: "None", })
       .status(200)
       .json(rest);
   } catch (error) {
